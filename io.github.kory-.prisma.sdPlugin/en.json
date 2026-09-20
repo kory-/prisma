@@ -1,0 +1,54 @@
+{
+  "Name": "Prisma",
+  "Description": "Control per-app volume and mute in Prisma. Automatically assign playing apps to Stream Deck + dials. Requires the Prisma macOS app.",
+  "io.github.kory-.prisma.auto": {
+    "Name": "Playing Apps",
+    "Encoder": {
+      "TriggerDescription": {
+        "Rotate": "Adjust volume",
+        "Push": "Toggle mute",
+        "Touch": "Toggle mute"
+      }
+    }
+  },
+  "io.github.kory-.prisma.up": {
+    "Name": "Volume Up"
+  },
+  "io.github.kory-.prisma.down": {
+    "Name": "Volume Down"
+  },
+  "io.github.kory-.prisma.mute": {
+    "Name": "Mute / Dial Volume",
+    "Encoder": {
+      "TriggerDescription": {
+        "Rotate": "Adjust volume",
+        "Push": "Toggle mute",
+        "Touch": "Toggle mute"
+      }
+    }
+  },
+  "Localization": {
+    "Launch Prisma": "Launch Prisma",
+    "Control off": "Control off",
+    "Waiting for audio": "Waiting for audio",
+    "Select an app": "Select an app",
+    "Check access": "Check access",
+    "Waiting for app": "Waiting for app",
+    "Muted": "Muted",
+    "App": "App",
+    "Target": "Target",
+    "Follow playing apps": "Follow playing apps",
+    "Choose a fixed app": "Choose a fixed app",
+    "Dials follow their position, from left to right. Apps stay assigned briefly after playback stops, and while adjusting or muted.": "Dials follow their position, from left to right. Apps stay assigned briefly after playback stops, and while adjusting or muted.",
+    "Open Prisma to detect apps.": "Open Prisma to detect apps.",
+    "App ID (optional)": "App ID (optional)",
+    "Display name (optional)": "Display name (optional)",
+    "Use app name": "Use app name",
+    "Amount per tick (%)": "Amount per tick (%)",
+    "Amount per press (%)": "Amount per press (%)",
+    "Turn to adjust volume. Press or tap to mute. Enable volume control in Prisma first.": "Turn to adjust volume. Press or tap to mute. Enable volume control in Prisma first.",
+    "Press to control the selected app. Enable volume control in Prisma first.": "Press to control the selected app. Enable volume control in Prisma first.",
+    "Enter a number from 1 to 100.": "Enter a number from 1 to 100.",
+    "Get Prisma and setup help": "Get Prisma and setup help"
+  }
+}

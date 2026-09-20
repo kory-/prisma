@@ -1,0 +1,54 @@
+{
+  "Name": "Prisma",
+  "Description": "Prismaのアプリ別音量とミュートをStream Deckから操作。Stream Deck +では、再生中のアプリをダイヤルに自動で割り当てます。macOS用Prisma本体が別途必要です。",
+  "io.github.kory-.prisma.auto": {
+    "Name": "再生中を自動割り当て",
+    "Encoder": {
+      "TriggerDescription": {
+        "Rotate": "音量を調整",
+        "Push": "ミュート切替",
+        "Touch": "ミュート切替"
+      }
+    }
+  },
+  "io.github.kory-.prisma.up": {
+    "Name": "音量を上げる"
+  },
+  "io.github.kory-.prisma.down": {
+    "Name": "音量を下げる"
+  },
+  "io.github.kory-.prisma.mute": {
+    "Name": "ミュート／ダイヤル音量",
+    "Encoder": {
+      "TriggerDescription": {
+        "Rotate": "音量を調整",
+        "Push": "ミュート切替",
+        "Touch": "ミュート切替"
+      }
+    }
+  },
+  "Localization": {
+    "Launch Prisma": "本体を起動",
+    "Control off": "コントロール停止",
+    "Waiting for audio": "再生待ち",
+    "Select an app": "アプリを選択",
+    "Check access": "アクセスを確認",
+    "Waiting for app": "起動待ち",
+    "Muted": "消音",
+    "App": "アプリ",
+    "Target": "操作するアプリ",
+    "Follow playing apps": "再生中のアプリを自動選択",
+    "Choose a fixed app": "アプリを固定",
+    "Dials follow their position, from left to right. Apps stay assigned briefly after playback stops, and while adjusting or muted.": "左からのダイヤル位置に合わせて割り当てます。再生停止後もしばらく保持し、操作中・ミュート中は対象を保ちます。",
+    "Open Prisma to detect apps.": "Prisma本体でアプリを検出してください。",
+    "App ID (optional)": "アプリID（手動入力）",
+    "Display name (optional)": "表示名（任意）",
+    "Use app name": "自動でアプリ名を表示",
+    "Amount per tick (%)": "1目盛りで変更する音量（%）",
+    "Amount per press (%)": "1回で変更する音量（%）",
+    "Turn to adjust volume. Press or tap to mute. Enable volume control in Prisma first.": "回して音量調整。押す／タッチでミュート。初回はPrisma本体の音量コントロールを開始してください。",
+    "Press to control the selected app. Enable volume control in Prisma first.": "押して対象アプリを操作します。初回はPrisma本体の音量コントロールを開始してください。",
+    "Enter a number from 1 to 100.": "1から100までの数値を入力してください。",
+    "Get Prisma and setup help": "Prismaの入手・設定方法"
+  }
+}

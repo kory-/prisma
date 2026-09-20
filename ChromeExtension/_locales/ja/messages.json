@@ -1,0 +1,89 @@
+{
+  "extension_description": {
+    "message": "再生中のタブを自動で見つけ、Prismaから音量を調整します。"
+  },
+  "checking_connection": {
+    "message": "接続を確認中…"
+  },
+  "retry_connection": {
+    "message": "接続を再確認"
+  },
+  "current_tab": {
+    "message": "このタブ"
+  },
+  "loading": {
+    "message": "読み込み中…"
+  },
+  "auto_detect_note": {
+    "message": "音声を再生すると、自動で表示されます。"
+  },
+  "audio_tabs": {
+    "message": "音声タブ"
+  },
+  "empty_tabs": {
+    "message": "タブで音声を再生すると、ここに表示されます。"
+  },
+  "privacy_note": {
+    "message": "タブを自動検出します。音声の録音・外部送信はしません。"
+  },
+  "connected": {
+    "message": "Prismaに接続済み"
+  },
+  "control_off": {
+    "message": "Prismaの音量コントロールは停止中"
+  },
+  "launch_prisma": {
+    "message": "Prismaを起動すると本体からも操作できます"
+  },
+  "standalone": {
+    "message": "拡張だけで動作中"
+  },
+  "setup_required": {
+    "message": "本体連携にはChrome拡張のセットアップが必要です。クリックして再確認。"
+  },
+  "no_tab": {
+    "message": "タブがありません"
+  },
+  "open_audio_page": {
+    "message": "音声を再生するWebページで開いてください。"
+  },
+  "detected_note": {
+    "message": "自動検出済み。Prismaの一覧・メニューでも調整できます。"
+  },
+  "reset_volume": {
+    "message": "100%に戻す"
+  },
+  "reset_named_volume": {
+    "message": "$1の音量をリセット"
+  },
+  "named_volume": {
+    "message": "$1の音量"
+  },
+  "unmute": {
+    "message": "解除"
+  },
+  "mute": {
+    "message": "消音"
+  },
+  "toggle_named_mute": {
+    "message": "$1のミュート切替"
+  },
+  "tab_not_found": {
+    "message": "タブが見つかりません。"
+  },
+  "disconnected": {
+    "message": "Prismaとの接続が終了しました。"
+  },
+  "chrome_tab": {
+    "message": "Chromeのタブ"
+  },
+  "unknown_operation": {
+    "message": "不明な操作です。"
+  },
+  "invalid_volume": {
+    "message": "音量の指定が正しくありません。"
+  },
+  "reload_page": {
+    "message": "このページを再読み込みすると個別調整できます"
+  }
+}

@@ -1,0 +1,6 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Prisma Tabs</title><link rel="stylesheet" href="popup.css"></head><body>
+<header><img src="icons/32.png" width="28" height="28" alt=""><div><strong>Prisma Tabs</strong><span id="connection" data-i18n="checking_connection">Checking connection…</span></div><button id="retry" class="quiet" title="Check connection again" data-i18n-title="retry_connection" aria-label="Check connection again" data-i18n-aria="retry_connection">↻</button></header>
+<section id="current"><p class="caption" data-i18n="current_tab">This Tab</p><h1 id="current-title" data-i18n="loading">Loading…</h1><p id="current-note" class="note" data-i18n="auto_detect_note">This tab appears automatically when audio plays.</p></section>
+<section id="controlled"><p class="caption" data-i18n="audio_tabs">Audio Tabs</p><div id="tabs"></div><p id="empty" class="note" data-i18n="empty_tabs">Tabs appear here when they play audio.</p></section>
+<p id="error" role="alert" hidden></p><footer data-i18n="privacy_note">Tabs are detected automatically. Audio is not recorded or sent externally.</footer>
+<script type="module" src="popup.js"></script></body></html>

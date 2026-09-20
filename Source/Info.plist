@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>Prisma</string>
+	<key>CFBundleExecutable</key>
+	<string>Prisma</string>
+	<key>CFBundleIconFile</key>
+	<string>Prism</string>
+	<key>CFBundleIdentifier</key>
+	<string>local.appmixer.desktop</string>
+	<key>CFBundleName</key>
+	<string>Prisma</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.7.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>App Mixer Control</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>appmixer</string>
+				<string>prism-audio</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>11</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.4</string>
+	<key>NSAudioCaptureUsageDescription</key>
+	<string>Prisma captures playback audio to adjust volume for each app. Audio is not saved to recording files or sent externally.</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>ja</string>
+	</array>
+</dict>
+</plist>

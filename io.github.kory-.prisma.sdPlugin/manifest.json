@@ -1,0 +1,109 @@
+{
+  "Actions": [
+    {
+      "UUID": "io.github.kory-.prisma.auto",
+      "Name": "Playing Apps",
+      "Icon": "images/auto",
+      "States": [
+        {
+          "Image": "images/auto",
+          "FontSize": 12,
+          "TitleAlignment": "middle"
+        }
+      ],
+      "Controllers": [
+        "Encoder"
+      ],
+      "PropertyInspectorPath": "inspector.html",
+      "SupportedInMultiActions": false,
+      "Encoder": {
+        "layout": "dial-layout.json",
+        "TriggerDescription": {
+          "Rotate": "Adjust volume",
+          "Push": "Toggle mute",
+          "Touch": "Toggle mute"
+        }
+      }
+    },
+    {
+      "UUID": "io.github.kory-.prisma.up",
+      "Name": "Volume Up",
+      "Icon": "images/up",
+      "States": [
+        {
+          "Image": "images/up",
+          "FontSize": 12,
+          "TitleAlignment": "middle"
+        }
+      ],
+      "Controllers": [
+        "Keypad"
+      ],
+      "PropertyInspectorPath": "inspector.html",
+      "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "io.github.kory-.prisma.down",
+      "Name": "Volume Down",
+      "Icon": "images/down",
+      "States": [
+        {
+          "Image": "images/down",
+          "FontSize": 12,
+          "TitleAlignment": "middle"
+        }
+      ],
+      "Controllers": [
+        "Keypad"
+      ],
+      "PropertyInspectorPath": "inspector.html",
+      "SupportedInMultiActions": false
+    },
+    {
+      "UUID": "io.github.kory-.prisma.mute",
+      "Name": "Mute / Dial Volume",
+      "Icon": "images/mute",
+      "States": [
+        {
+          "Image": "images/mute",
+          "FontSize": 12,
+          "TitleAlignment": "middle"
+        }
+      ],
+      "Controllers": [
+        "Keypad",
+        "Encoder"
+      ],
+      "PropertyInspectorPath": "inspector.html",
+      "SupportedInMultiActions": false,
+      "Encoder": {
+        "layout": "dial-layout.json",
+        "TriggerDescription": {
+          "Rotate": "Adjust volume",
+          "Push": "Toggle mute",
+          "Touch": "Toggle mute"
+        }
+      }
+    }
+  ],
+  "Author": "kory-",
+  "CodePath": "plugin",
+  "Description": "Control per-app volume and mute in Prisma. Automatically assign playing apps to Stream Deck + dials. Requires the Prisma macOS app.",
+  "Icon": "images/plugin",
+  "Name": "Prisma",
+  "Category": "Prisma",
+  "CategoryIcon": "images/frame",
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "14.4"
+    }
+  ],
+  "UUID": "io.github.kory-.prisma",
+  "Version": "0.4.1.0",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "6.6"
+  },
+  "URL": "https://github.com/kory-/prisma"
+}

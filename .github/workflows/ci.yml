@@ -1,0 +1,32 @@
+name: Build and test
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  macos:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build app and plugin
+        run: ./build.command
+      - name: Logic, sanitizer and localization tests
+        run: ./test.command
+      - name: Native UI language tests
+        run: ./test-localization.command
+      - name: Native messaging framing tests
+        run: python3 Tests/ChromeHostTests.py
+      - name: Validate and package
+        run: |
+          npm install --prefix .build/tools @elgato/cli@1.9.0
+          STREAMDECK_CLI="$PWD/.build/tools/node_modules/.bin/streamdeck" ./package.command

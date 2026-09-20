@@ -1,0 +1,89 @@
+{
+  "extension_description": {
+    "message": "Automatically find playing tabs and adjust their volume from Prisma."
+  },
+  "checking_connection": {
+    "message": "Checking connection…"
+  },
+  "retry_connection": {
+    "message": "Check connection again"
+  },
+  "current_tab": {
+    "message": "This Tab"
+  },
+  "loading": {
+    "message": "Loading…"
+  },
+  "auto_detect_note": {
+    "message": "This tab appears automatically when audio plays."
+  },
+  "audio_tabs": {
+    "message": "Audio Tabs"
+  },
+  "empty_tabs": {
+    "message": "Tabs appear here when they play audio."
+  },
+  "privacy_note": {
+    "message": "Tabs are detected automatically. Audio is not recorded or sent externally."
+  },
+  "connected": {
+    "message": "Connected to Prisma"
+  },
+  "control_off": {
+    "message": "Volume control is off in Prisma"
+  },
+  "launch_prisma": {
+    "message": "Open Prisma to control tabs from the app"
+  },
+  "standalone": {
+    "message": "Extension running on its own"
+  },
+  "setup_required": {
+    "message": "Set up the Chrome extension in Prisma to connect. Click to check again."
+  },
+  "no_tab": {
+    "message": "No tab available"
+  },
+  "open_audio_page": {
+    "message": "Open this on a web page that plays audio."
+  },
+  "detected_note": {
+    "message": "Detected automatically. Adjust volume in Prisma or its menu."
+  },
+  "reset_volume": {
+    "message": "Reset to 100%"
+  },
+  "reset_named_volume": {
+    "message": "Reset volume for $1"
+  },
+  "named_volume": {
+    "message": "Volume for $1"
+  },
+  "unmute": {
+    "message": "Unmute"
+  },
+  "mute": {
+    "message": "Mute"
+  },
+  "toggle_named_mute": {
+    "message": "Toggle mute for $1"
+  },
+  "tab_not_found": {
+    "message": "This tab could not be found."
+  },
+  "disconnected": {
+    "message": "Disconnected from Prisma."
+  },
+  "chrome_tab": {
+    "message": "Chrome Tab"
+  },
+  "unknown_operation": {
+    "message": "Unknown operation."
+  },
+  "invalid_volume": {
+    "message": "Enter a valid volume."
+  },
+  "reload_page": {
+    "message": "Reload this page to control its volume."
+  }
+}

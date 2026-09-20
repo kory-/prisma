@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Prisma</title><style>
+:root{color-scheme:dark}body{background:#2d2d2d;color:#eee;font:12px -apple-system,BlinkMacSystemFont,sans-serif;margin:0;padding:16px}h3{font-size:13px;font-weight:600;margin:0 0 20px}label{display:block;margin:16px 0 6px;color:#ddd}input,select{box-sizing:border-box;width:100%;padding:6px 8px;background:#3b3b3b;color:#f5f5f5;border:1px solid #555;border-radius:5px;font:inherit;min-height:28px}input:focus,select:focus{outline:2px solid #0a84ff;outline-offset:1px}p{line-height:1.65;color:#aaa;margin:10px 0}select:disabled{opacity:.6}
+a{color:#7db7ff}
+</style></head><body hidden>
+<h3>Prisma</h3>
+<label for="mode" data-i18n="Target">Target</label><select id="mode"><option value="auto" data-i18n="Follow playing apps">Follow playing apps</option><option value="fixed" data-i18n="Choose a fixed app">Choose a fixed app</option></select>
+<div id="auto" hidden><p data-i18n="Dials follow their position, from left to right. Apps stay assigned briefly after playback stops, and while adjusting or muted."></p></div>
+<div id="fixed" hidden><label for="apps" data-i18n="Target">Target</label><select id="apps"><option value="" data-i18n="Open Prisma to detect apps.">Open Prisma to detect apps.</option></select>
+<label for="app" data-i18n="App ID (optional)">App ID (optional)</label><input id="app" placeholder="com.google.Chrome">
+<label for="label" data-i18n="Display name (optional)">Display name (optional)</label><input id="label" data-i18n-placeholder="Use app name" placeholder="Use app name"></div>
+<label for="step" id="step-label">Amount per tick (%)</label><input id="step" type="number" min="1" max="100" value="5" aria-describedby="error"><p id="error" role="alert" hidden></p><p id="help"></p>
+<p><a id="setup" href="https://github.com/kory-/prisma/blob/main/docs/stream-deck.md" target="_blank" rel="noopener noreferrer" data-i18n="Get Prisma and setup help">Get Prisma and setup help</a></p>
+<script src="localization.js"></script><script src="inspector.js"></script></body></html>

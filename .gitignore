@@ -1,0 +1,21 @@
+# Local builds and distribution artifacts
+.build/
+dist/
+*.app/
+*.dSYM/
+*.streamDeckPlugin
+*.streamDeckProfile
+io.github.kory-.prisma.sdPlugin/plugin
+node_modules/
+.DS_Store
+__pycache__/
+*.pyc
+# Private signing and local configuration
+*.pem
+*.key
+*.p12
+*.p8
+*.mobileprovision
+.env
+.env.*
+io.github.kory-.prisma.sdPlugin/LICENSE
