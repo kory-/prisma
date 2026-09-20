@@ -1,0 +1,20 @@
+{
+  "name": "Prisma",
+  "author": "kory-",
+  "pluginUUID": "io.github.kory-.prisma",
+  "pluginVersion": "0.4.2.0",
+  "price": "Free",
+  "description": "Control each Mac app's volume from Stream Deck with Prisma. Use keys for volume and mute, or turn Stream Deck + dials to adjust playing apps automatically. App icons, names and volume levels appear on the touch strip, so you can see what you are controlling.\n\nChoose a fixed app or let the dials follow playback. Set the amount changed by each key press or dial tick. Press a dial or touch its display to mute. Add the optional Prisma Tabs Chrome extension to control individual browser tabs without adding them one by one.\n\nRequires the separate, free Prisma macOS app, an Apple Silicon Mac running macOS 14.4 or later, and Stream Deck software 6.6 or later. Dials require Stream Deck +. Windows and Intel Macs are not supported. The app and plugin support English and Japanese. Download Prisma and follow the setup guide using the links below.",
+  "links": [
+    {"label": "Download Prisma", "url": "https://github.com/kory-/prisma/releases"},
+    {"label": "Setup guide", "url": "https://github.com/kory-/prisma/blob/main/docs/stream-deck.md"},
+    {"label": "Support", "url": "https://github.com/kory-/prisma/issues"},
+    {"label": "Privacy", "url": "https://github.com/kory-/prisma/blob/main/PRIVACY.md"},
+    {"label": "Source code", "url": "https://github.com/kory-/prisma"}
+  ],
+  "releaseNotes": "First Marketplace release. Includes automatic playing-app dials, fixed app targets, volume up/down and mute keys, adjustable volume steps, app icons on the touch strip, optional Chrome tab integration, and English/Japanese localization.",
+  "appIcon": "icon-288.png",
+  "thumbnail": "thumbnail.png",
+  "gallery": ["gallery-playing.png", "gallery-controls.png", "gallery-tabs.png"],
+  "publishAfterApproval": true
+}

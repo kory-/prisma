@@ -1,12 +1,18 @@
 """Package explicit release components; never include workspace state or signing secrets."""
 from pathlib import Path
-import hashlib, json, plistlib, zipfile, stat, shutil
+import argparse, hashlib, json, plistlib, zipfile, stat, shutil
 
 root = Path(__file__).resolve().parents[1]
-out = root / 'dist'
-app = root / 'Prisma.app'
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--app', type=Path, default=root/'Prisma.app')
+parser.add_argument('--output-dir', type=Path, default=root/'dist')
+args = parser.parse_args()
+out = args.output_dir.resolve()
+app = args.app.resolve()
+out.mkdir(parents=True, exist_ok=True)
 app_version = plistlib.loads((app/'Contents/Info.plist').read_bytes())['CFBundleShortVersionString']
-chrome_version = json.loads((root/'ChromeExtension/manifest.json').read_text())['version']
+extension = app/'Contents/Resources/ChromeExtension'
+chrome_version = json.loads((extension/'manifest.json').read_text())['version']
 blocked = {'.pem', '.key', '.p12', '.p8', '.mobileprovision'}
 
 def add(zip_file, path, name):
@@ -33,7 +39,7 @@ with zipfile.ZipFile(app_zip,'w') as z:
     add(z,root/'Assets/Prism-preview.png','Assets/Prism-preview.png')
 chrome_zip = out/f'Prisma-Tabs-{chrome_version}.zip'
 with zipfile.ZipFile(chrome_zip,'w') as z:
-    tree(z,root/'ChromeExtension','ChromeExtension')
+    tree(z,extension,'ChromeExtension')
     z.writestr('README.md',(root/'docs/chrome.md').read_text().replace('../PRIVACY.md','PRIVACY.md'),compress_type=zipfile.ZIP_DEFLATED)
     add(z,root/'LICENSE','LICENSE')
     add(z,root/'PRIVACY.md','PRIVACY.md')

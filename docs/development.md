@@ -47,3 +47,7 @@ GitHub Actions builds and tests changes on an Apple Silicon macOS runner. Audio 
 - `Tests/`: isolated native, JavaScript and integration checks.
 
 The native app ID `local.appmixer.desktop`, local notification names and URL schemes remain stable for existing user preferences. The public Stream Deck ID is `io.github.kory-.prisma`; it is distinct from the old private development ID. The Chrome manifest contains a **public** key to preserve extension identity; no private signing key belongs in this repository or its releases.
+
+## Public distribution
+
+Developer ID signing and notarization use the separate [notarization workflow](notarization.md). Its output stays separate from ad-hoc developer builds. [Marketplace submission materials](../Release/Marketplace/README.md) include a reproducible image generator and listing data; preparing them does not imply Marketplace approval.

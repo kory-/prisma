@@ -100,7 +100,7 @@
     }
   ],
   "UUID": "io.github.kory-.prisma",
-  "Version": "0.4.1.0",
+  "Version": "0.4.2.0",
   "SDKVersion": 2,
   "Software": {
     "MinimumVersion": "6.6"
