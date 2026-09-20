@@ -16,7 +16,7 @@ The optional plugin requires **Prisma 0.7.0**, an **Apple Silicon Mac**, macOS *
 | Volume Up / Volume Down | Place on a key. Choose an app and an amount per press. |
 | Mute / Dial Volume | Place on a key to mute; on a dial to adjust volume and mute. Choose a fixed app or automatic mode. |
 
-Turn a dial to change volume; press or touch to toggle mute. App icons, names and levels appear on the touch strip. Assignments remain stable briefly after playback stops, and while adjusting or muted. Settings save automatically. An optional `Prisma Auto.streamDeckProfile` sets up four automatic dials; importing it is not required and does not replace your current profile automatically.
+Turn a dial to change volume; press or touch to toggle mute. App icons, names and levels appear on the touch strip. Assignments remain stable briefly after playback stops, and while adjusting or muted. Settings save automatically. An optional `Prisma.Auto.streamDeckProfile` sets up four automatic dials; importing it is not required and does not replace your current profile automatically.
 
 The plugin follows Stream Deck's language (Japanese/English; otherwise English). **Get Prisma and setup help** in the action settings links to this page. If the display says **Launch Prisma**, launch the app. If it says **Control off**, enable volume control in Prisma.
 

@@ -37,10 +37,10 @@ with zipfile.ZipFile(chrome_zip,'w') as z:
     z.writestr('README.md',(root/'docs/chrome.md').read_text().replace('../PRIVACY.md','PRIVACY.md'),compress_type=zipfile.ZIP_DEFLATED)
     add(z,root/'LICENSE','LICENSE')
     add(z,root/'PRIVACY.md','PRIVACY.md')
-shutil.copy2(root/'Prisma Auto.streamDeckProfile',out/'Prisma Auto.streamDeckProfile')
+shutil.copy2(root/'Prisma Auto.streamDeckProfile',out/'Prisma.Auto.streamDeckProfile')
 plugin = out/'io.github.kory-.prisma.streamDeckPlugin'
 assert plugin.is_file()
-files = [app_zip,chrome_zip,plugin,out/'Prisma Auto.streamDeckProfile']
+files = [app_zip,chrome_zip,plugin,out/'Prisma.Auto.streamDeckProfile']
 for path in files:
     with zipfile.ZipFile(path) as z:
         assert z.testzip() is None, path
