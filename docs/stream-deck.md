@@ -2,7 +2,9 @@
 
 [Download Prisma and the plugin](https://github.com/kory-/prisma/releases/tag/v0.7.0) · [日本語の手順](#日本語の手順)
 
-The optional plugin requires **Prisma 0.7.0**, an **Apple Silicon Mac**, macOS **14.4+**, and Stream Deck software **6.6+**. Dials require Stream Deck +. Windows and Intel Mac builds are not included.
+The GitHub preview plugin (0.4.1.0) requires **Prisma 0.7.0**, an **Apple Silicon Mac**, macOS **14.4+**, and Stream Deck software **6.6+**. Dials require Stream Deck +. Windows and Intel Mac builds are not included.
+
+The Marketplace candidate (0.4.2.0) requires Stream Deck **6.9+** and uses SDK 3 for Marketplace processing. It works with the same Prisma 0.7.0 app. Marketplace approval is pending.
 
 ## Setup
 
@@ -38,5 +40,7 @@ This package is distributed directly through GitHub. It is **not yet listed or a
 2. `io.github.kory-.prisma.streamDeckPlugin` をダブルクリックしてStream Deckへ導入します。
 3. 「Prisma」カテゴリのアクションを配置します。「再生中を自動割り当て」をダイヤルに置くと、左から再生中アプリを自動で割り当てます。
 4. 回して音量、押す／タッチでミュート。固定アプリや変更幅はアクション設定から選べます。
+
+Marketplace提出版（0.4.2.0）はStream Deck 6.9以降が必要です。GitHubプレビュー版（0.4.1.0）の必要条件は6.6以降のままです。
 
 Prisma本体は別途必要です。本体だけでも利用できます。以前の開発用プラグインとはIDが異なるため、既存プロファイルをバックアップし、公開版のアクションへ置き換えてください。現在はGitHubでの直接配布で、Marketplace掲載前です。
