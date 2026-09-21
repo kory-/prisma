@@ -2,7 +2,7 @@
 
 ## 0.7.1 — In preparation
 
-- Add a Developer ID signing and resumable Apple notarization workflow for the app, Chrome native helper and Stream Deck executable. Actual notarization and Marketplace approval are still pending.
+- Add an optional Developer ID signing and resumable Apple notarization workflow for the app, Chrome native helper and Stream Deck executable. Current previews remain ad-hoc signed and not notarized; Marketplace approval is still pending.
 - Prepare Stream Deck plugin 0.4.2.0, listing text, thumbnail and three gallery images for submission.
 - Verify the exact submitted archive and the final extracted app, and guard against duplicate notarization uploads.
 - Add app copyright metadata. Audio behavior is unchanged.

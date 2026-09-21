@@ -50,4 +50,6 @@ The native app ID `local.appmixer.desktop`, local notification names and URL sch
 
 ## Public distribution
 
-Developer ID signing and notarization use the separate [notarization workflow](notarization.md). Its output stays separate from ad-hoc developer builds. [Marketplace submission materials](../Release/Marketplace/README.md) include a reproducible image generator and listing data; preparing them does not imply Marketplace approval.
+Public previews are distributed directly through GitHub with ad-hoc signatures and without Apple notarization. The build and packaging commands above do not require a paid Apple Developer Program membership. Release notes must state the signing status and link to the installation instructions.
+
+An optional [notarization workflow](notarization.md) is available for maintainers who have Developer ID credentials. Its output stays separate from ad-hoc preview builds; it is not part of the current preview release process. [Marketplace submission materials](../Release/Marketplace/README.md) include a reproducible image generator and listing data; preparing them does not imply Marketplace approval.

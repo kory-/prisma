@@ -1,6 +1,6 @@
 # Developer ID signing and notarization
 
-The workflow below prepares the next release; having these scripts does **not** mean an artifact has been notarized. A completed release requires a real Apple submission with `Accepted` status, a matching log/archive hash, a stapled app ticket, and successful verification of the app extracted from its final ZIP.
+This is an optional workflow for maintainers with Developer ID credentials. Current public previews use ad-hoc signatures and are **not** notarized; Apple enrollment and notarization are not part of their release process. Having these scripts does **not** mean an artifact has been notarized. Any future release described as notarized requires a real Apple submission with `Accepted` status, a matching log/archive hash, a stapled app ticket, and successful verification of the app extracted from its final ZIP.
 
 ## Account setup
 
