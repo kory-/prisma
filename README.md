@@ -24,10 +24,26 @@ Prisma runs on its own. Chrome and Stream Deck are optional integrations. No vir
 
 ## Install
 
-1. Download `Prisma-0.7.0-macOS-arm64.zip` from the [release page](https://github.com/kory-/prisma/releases/tag/v0.7.0), unzip it, and move `Prisma.app` to Applications.
-2. Open Prisma. This preview has no Developer ID signature or Apple notarization. If macOS blocks it, follow [Apple's instructions for an app you trust](https://support.apple.com/en-us/102445), or [build from source](docs/development.md). Do not disable Gatekeeper globally.
-3. Turn on volume control in the toolbar and allow system audio access when macOS asks.
-4. Play audio and adjust the app's slider. Closing the window keeps Prisma in the menu bar by default.
+Install from the [Prisma Homebrew tap](https://github.com/kory-/homebrew-tap):
+
+```sh
+brew install --cask kory-/tap/prisma
+```
+
+Or download `Prisma-0.7.0-macOS-arm64.zip` from the [release page](https://github.com/kory-/prisma/releases/tag/v0.7.0), unzip it, and move `Prisma.app` to Applications. If switching from a manual installation to Homebrew, quit Prisma and move the old app out of Applications first; your saved settings are retained.
+
+1. Open Prisma. This preview has no Developer ID signature or Apple notarization, including when installed with Homebrew. If macOS blocks it, follow [Apple's instructions for an app you trust](https://support.apple.com/en-us/102445), or [build from source](docs/development.md). Do not disable Gatekeeper globally.
+2. Turn on volume control in the toolbar and allow system audio access when macOS asks.
+3. Play audio and adjust the app's slider. Closing the window keeps Prisma in the menu bar by default.
+
+For Homebrew updates, quit Prisma, then run:
+
+```sh
+brew update
+brew upgrade --cask kory-/tap/prisma
+```
+
+To uninstall the Homebrew app, run `brew uninstall --cask kory-/tap/prisma`. Your preferences and separately installed Chrome and Stream Deck integrations are retained.
 
 Settings are available from the gear button or **⌘,**. The output selector changes the Mac's default output device, rather than routing each app to a separate device.
 
