@@ -14,4 +14,5 @@ python3 Source/MakeProfile.py
 mkdir -p dist
 "$prisma_cli" validate --no-update-check io.github.kory-.prisma.sdPlugin
 "$prisma_cli" pack --no-update-check io.github.kory-.prisma.sdPlugin --output dist --force
+python3 Source/PluginPackagePermissions.py dist/io.github.kory-.prisma.streamDeckPlugin io.github.kory-.prisma.sdPlugin
 python3 Source/PackageRelease.py

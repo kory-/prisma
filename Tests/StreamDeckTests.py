@@ -1,5 +1,6 @@
-import asyncio,json,os,websockets
+import asyncio,json,sys,websockets
 from pathlib import Path
+binary = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else Path(__file__).resolve().parents[1] / 'io.github.kory-.prisma.sdPlugin/plugin'
 async def main():
  passed=asyncio.Event()
  async def handle(ws):
@@ -21,7 +22,7 @@ async def main():
   await asyncio.sleep(.1)
  async with websockets.serve(handle,'127.0.0.1',0) as server:
   port=server.sockets[0].getsockname()[1]
-  proc=await asyncio.create_subprocess_exec(str(Path(__file__).resolve().parents[1] / 'io.github.kory-.prisma.sdPlugin/plugin'),'-port',str(port),'-pluginUUID','TEST','-registerEvent','registerPlugin')
+  proc=await asyncio.create_subprocess_exec(str(binary),'-port',str(port),'-pluginUUID','TEST','-registerEvent','registerPlugin',cwd=binary.parent)
   try:await asyncio.wait_for(passed.wait(),10)
   finally:
    if proc.returncode is None:proc.terminate()

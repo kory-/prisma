@@ -30,3 +30,8 @@ jobs:
         run: |
           npm install --prefix .build/tools @elgato/cli@1.9.0
           STREAMDECK_CLI="$PWD/.build/tools/node_modules/.bin/streamdeck" ./package.command
+      - name: Run the packed plugin outside the checkout
+        run: |
+          python3 -m venv .build/plugin-test-env
+          .build/plugin-test-env/bin/python -m pip install websockets==17.1
+          .build/plugin-test-env/bin/python Tests/PackedPluginTests.py dist/io.github.kory-.prisma.streamDeckPlugin

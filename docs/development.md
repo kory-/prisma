@@ -32,7 +32,17 @@ npm install --prefix .build/tools @elgato/cli@1.9.0
 STREAMDECK_CLI="$PWD/.build/tools/node_modules/.bin/streamdeck" ./package.command
 ```
 
-The packaging command validates signatures and the Stream Deck manifest, builds release archives from explicit component directories, and produces SHA-256 checksums under `dist/`. It does not upload, install, or notarize anything.
+The packaging command validates signatures and the Stream Deck manifest, preserves native executable permissions lost by the CLI ZIP writer, builds release archives from explicit component directories, and produces SHA-256 checksums under `dist/`. It does not upload, install, or notarize anything. The permissions pass applies only to local CLI output, never to a DRM-processed Marketplace download.
+
+Test the resulting package outside the checkout:
+
+```sh
+python3 -m venv .build/plugin-test-env
+.build/plugin-test-env/bin/python -m pip install websockets==17.1
+.build/plugin-test-env/bin/python Tests/PackedPluginTests.py dist/io.github.kory-.prisma.streamDeckPlugin
+```
+
+This extracts the final archive into a temporary directory, checks its code signature and executable permissions, and runs the extracted binary against a local mock Stream Deck connection. It must pass without changing permissions after extraction. Before submitting to Marketplace, also install the packed file through Stream Deck itself, then test the DRM-processed download from Maker Console. Passing the mock connection test alone does not establish that the Stream Deck installer accepts the package.
 
 GitHub Actions builds and tests changes on an Apple Silicon macOS runner. Audio permission and physical-device tests remain manual. Publication is a separate maintainer action.
 

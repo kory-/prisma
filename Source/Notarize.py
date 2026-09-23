@@ -156,6 +156,7 @@ def finish(profile, cli):
     run(cli, 'validate', '--no-update-check', plugin)
     run(cli, 'pack', '--no-update-check', plugin, '--output', output, '--force')
     packed_plugin = output/'io.github.kory-.prisma.streamDeckPlugin'
+    run('python3', ROOT/'Source/PluginPackagePermissions.py', packed_plugin, plugin)
     with zipfile.ZipFile(packed_plugin) as archive:
         names = [name for name in archive.namelist() if name.endswith('/plugin')]
         if len(names) != 1 or hashlib.sha256(archive.read(names[0])).hexdigest() != digest(payload/PLUGIN/'plugin'):
