@@ -23,7 +23,7 @@
       "url": "https://github.com/kory-/prisma/blob/main/PRIVACY.md"
     }
   ],
-  "releaseNotes": "First Marketplace release. Includes automatic playing-app dials, fixed app targets, volume up/down and mute keys, adjustable volume steps, app icons on the touch strip, optional Chrome tab integration, and English/Japanese localization. Requires Prisma 0.7.0 or later and Stream Deck 6.9 or later.",
+  "releaseNotes": "First Marketplace release. Includes automatic playing-app dials, fixed app targets, volume up/down and mute keys, adjustable volume steps, app icons on the touch strip, optional Chrome tab integration, and English/Japanese localization.\n\nPackaging update: preserves native executable permissions in the installer archive. The original Marketplace-processed package and this revised packed file were each successfully installed through Stream Deck on two Macs. On the documented test Mac (Apple Silicon, macOS 27.0, Stream Deck 7.4.0), plugin startup and connection also succeeded. The previously reported installation failure has not been reproduced.\n\nRequires the separate Prisma 0.7.0 or later companion app, Apple Silicon, macOS 14.4 or later, and Stream Deck 6.9 or later.",
   "appIcon": "icon-288.png",
   "thumbnail": "thumbnail.png",
   "gallery": [
