@@ -2,7 +2,7 @@
 
 ## 0.7.1 — In preparation
 
-- Preserve native executable permissions in the packed Stream Deck plugin. Add a regression check that extracts and launches the actual archive outside the checkout. Stream Deck installation and Marketplace re-review are still pending.
+- Preserve native executable permissions in the packed Stream Deck plugin. Add a regression check that extracts and launches the actual archive outside the checkout. Both the original Marketplace download and the revised local package installed and connected on the tested Mac; the reviewer's installation failure has not been reproduced and re-review is pending.
 - Add an optional Developer ID signing and resumable Apple notarization workflow for the app, Chrome native helper and Stream Deck executable. Current previews remain ad-hoc signed and not notarized; Marketplace approval is still pending.
 - Prepare Stream Deck plugin 0.4.2.0, listing text, thumbnail and three gallery images for submission. Enable SDK 3 for Marketplace processing; the new plugin requires Stream Deck 6.9 or later.
 - Verify the exact submitted archive and the final extracted app, and guard against duplicate notarization uploads.
