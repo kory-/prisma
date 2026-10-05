@@ -23,6 +23,10 @@ The maintainer subsequently reported successful installation of both packed file
 
 The revised package identified above was resubmitted as version 0.4.2.0 on 2026-09-24. Maker Console confirmed the upload and displayed **Pending review**. The submitted release notes in `listing.json` describe the packaging change, the two-Mac installation results and the fact that the reviewer's failure remains unreproduced. This is not Marketplace approval. The newly Marketplace-processed revision has not yet been downloaded or installation-tested.
 
+## Subsequent review status
+
+The September 24 resubmission was rejected again with the same installation feedback. Technical details were requested by email on September 25 and September 30 (Japan time); as of October 5, only an automated acknowledgement had been received. On October 5, the same tested package was resubmitted with those follow-up details in the release notes. Maker Console confirmed **Pending review** for 0.4.2, dated October 5. No further binary changes or new compatibility results are claimed.
+
 ## What the permissions change establishes
 
 The original CLI archive loses executable permissions. Extracting it with `ditto` and launching it directly fails with `Permission denied`. The revised package preserves permissions and passes `Tests/PackedPluginTests.py` without a post-extraction `chmod`.
