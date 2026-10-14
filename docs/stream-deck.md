@@ -1,6 +1,6 @@
 # Prisma for Stream Deck
 
-[Download Prisma and the plugin](https://github.com/kory-/prisma/releases/tag/v0.7.0) · [日本語の手順](#日本語の手順)
+[Download Prisma app](https://github.com/kory-/prisma/releases/tag/v0.7.0) · [Download plugin 0.4.3](https://github.com/kory-/prisma/releases/tag/plugin-v0.4.3) · [日本語の手順](#日本語の手順)
 
 The GitHub preview plugin (0.4.1.0) requires **Prisma 0.7.0**, an **Apple Silicon Mac**, macOS **14.4+**, and Stream Deck software **6.6+**. Dials require Stream Deck +. Windows and Intel Mac builds are not included.
 

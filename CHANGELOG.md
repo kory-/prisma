@@ -1,6 +1,6 @@
 # Changelog
 
-## Stream Deck plugin 0.4.3.0 — In preparation
+## Stream Deck plugin 0.4.3.0 — 2026-10-15 preview
 
 - Change the plugin UUID to `io.github.kory.prisma` at Elgato's request after they identified the trailing dash in the former ID as the cause of installation failures in their testing. Update all actions, localization catalogs, build/package paths and the optional profile together.
 - The optional profile also has a separate identity from the old preview. Existing preview actions use different IDs and require manual migration; the app and Chrome IDs are unchanged.
