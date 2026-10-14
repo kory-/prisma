@@ -24,10 +24,26 @@ Prisma本体だけでも使えます。仮想オーディオドライバや管�
 
 ## 導入
 
-1. [リリースページ](https://github.com/kory-/prisma/releases/tag/v0.7.0)から `Prisma-0.7.0-macOS-arm64.zip` をダウンロードして展開し、`Prisma.app` を「アプリケーション」に移動します。
-2. Prismaを開きます。この試験版にはDeveloper ID署名・Apple公証がありません。macOSにブロックされた場合は、信頼するアプリ向けの[Appleの手順](https://support.apple.com/ja-jp/102445)を確認するか、[ソースからビルド](docs/development.md)してください。Gatekeeper全体を無効にする必要はありません。
-3. ツールバーの音量コントロールをオンにして、macOSのシステムオーディオへのアクセスを許可します。
-4. 音声を再生し、アプリのスライダーで調整します。標準では、ウインドウを閉じてもメニューバーに常駐します。
+[PrismaのHomebrew配布元](https://github.com/kory-/homebrew-tap)からインストールできます。
+
+```sh
+brew install --cask kory-/tap/prisma
+```
+
+手動で導入する場合は、[リリースページ](https://github.com/kory-/prisma/releases/tag/v0.7.0)から `Prisma-0.7.0-macOS-arm64.zip` をダウンロードして展開し、`Prisma.app` を「アプリケーション」に移動してください。手動導入からHomebrewに切り替える場合は、Prismaを終了し、古いアプリを「アプリケーション」の外へ移動してからインストールします。保存済みの設定は維持されます。
+
+1. Prismaを開きます。この試験版にはDeveloper ID署名・Apple公証がありません。Homebrew経由でも同じです。macOSにブロックされた場合は、信頼するアプリ向けの[Appleの手順](https://support.apple.com/ja-jp/102445)を確認するか、[ソースからビルド](docs/development.md)してください。Gatekeeper全体を無効にする必要はありません。
+2. ツールバーの音量コントロールをオンにして、macOSのシステムオーディオへのアクセスを許可します。
+3. 音声を再生し、アプリのスライダーで調整します。標準では、ウインドウを閉じてもメニューバーに常駐します。
+
+Homebrewで更新する場合は、Prismaを終了してから実行してください。
+
+```sh
+brew update
+brew upgrade --cask kory-/tap/prisma
+```
+
+削除は `brew uninstall --cask kory-/tap/prisma` で行えます。設定と、別途導入したChrome拡張・Stream Deckプラグインは残ります。
 
 設定は歯車ボタンまたは **⌘,** で開けます。出力先の変更はMac全体に適用されます。アプリごとに別の出力先を指定する機能ではありません。
 
