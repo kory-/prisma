@@ -18,3 +18,5 @@ node Tests/ChromeWorkerTests.mjs
 
 node Tests/LocalizationWebTests.mjs
 python3 Tests/LocalizationAudit.py
+
+python3 Tests/NotarizationTests.py

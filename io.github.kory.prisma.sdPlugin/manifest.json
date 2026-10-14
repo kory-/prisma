@@ -1,7 +1,7 @@
 {
   "Actions": [
     {
-      "UUID": "io.github.kory-.prisma.auto",
+      "UUID": "io.github.kory.prisma.auto",
       "Name": "Playing Apps",
       "Icon": "images/auto",
       "States": [
@@ -26,7 +26,7 @@
       }
     },
     {
-      "UUID": "io.github.kory-.prisma.up",
+      "UUID": "io.github.kory.prisma.up",
       "Name": "Volume Up",
       "Icon": "images/up",
       "States": [
@@ -43,7 +43,7 @@
       "SupportedInMultiActions": false
     },
     {
-      "UUID": "io.github.kory-.prisma.down",
+      "UUID": "io.github.kory.prisma.down",
       "Name": "Volume Down",
       "Icon": "images/down",
       "States": [
@@ -60,7 +60,7 @@
       "SupportedInMultiActions": false
     },
     {
-      "UUID": "io.github.kory-.prisma.mute",
+      "UUID": "io.github.kory.prisma.mute",
       "Name": "Mute / Dial Volume",
       "Icon": "images/mute",
       "States": [
@@ -99,11 +99,11 @@
       "MinimumVersion": "14.4"
     }
   ],
-  "UUID": "io.github.kory-.prisma",
-  "Version": "0.4.1.0",
-  "SDKVersion": 2,
+  "UUID": "io.github.kory.prisma",
+  "Version": "0.4.3.0",
+  "SDKVersion": 3,
   "Software": {
-    "MinimumVersion": "6.6"
+    "MinimumVersion": "6.9"
   },
   "URL": "https://github.com/kory-/prisma"
 }

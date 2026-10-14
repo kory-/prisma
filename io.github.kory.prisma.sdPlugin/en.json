@@ -1,7 +1,7 @@
 {
   "Name": "Prisma",
   "Description": "Control per-app volume and mute in Prisma. Automatically assign playing apps to Stream Deck + dials. Requires the Prisma macOS app.",
-  "io.github.kory-.prisma.auto": {
+  "io.github.kory.prisma.auto": {
     "Name": "Playing Apps",
     "Encoder": {
       "TriggerDescription": {
@@ -11,13 +11,13 @@
       }
     }
   },
-  "io.github.kory-.prisma.up": {
+  "io.github.kory.prisma.up": {
     "Name": "Volume Up"
   },
-  "io.github.kory-.prisma.down": {
+  "io.github.kory.prisma.down": {
     "Name": "Volume Down"
   },
-  "io.github.kory-.prisma.mute": {
+  "io.github.kory.prisma.mute": {
     "Name": "Mute / Dial Volume",
     "Encoder": {
       "TriggerDescription": {
