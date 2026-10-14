@@ -1,7 +1,7 @@
 {
   "Name": "Prisma",
   "Description": "Prismaのアプリ別音量とミュートをStream Deckから操作。Stream Deck +では、再生中のアプリをダイヤルに自動で割り当てます。macOS用Prisma本体が別途必要です。",
-  "io.github.kory-.prisma.auto": {
+  "io.github.kory.prisma.auto": {
     "Name": "再生中を自動割り当て",
     "Encoder": {
       "TriggerDescription": {
@@ -11,13 +11,13 @@
       }
     }
   },
-  "io.github.kory-.prisma.up": {
+  "io.github.kory.prisma.up": {
     "Name": "音量を上げる"
   },
-  "io.github.kory-.prisma.down": {
+  "io.github.kory.prisma.down": {
     "Name": "音量を下げる"
   },
-  "io.github.kory-.prisma.mute": {
+  "io.github.kory.prisma.mute": {
     "Name": "ミュート／ダイヤル音量",
     "Encoder": {
       "TriggerDescription": {

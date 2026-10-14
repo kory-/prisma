@@ -18,7 +18,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 WORK = ROOT / '.build/notarization'
 STATE = WORK / 'state.json'
-PLUGIN = 'io.github.kory-.prisma.sdPlugin'
+PLUGIN = 'io.github.kory.prisma.sdPlugin'
 
 def run(*args):
     result = subprocess.run([str(a) for a in args], cwd=ROOT, capture_output=True, text=True)
@@ -77,7 +77,7 @@ def prepare(identity):
     plugin = payload/PLUGIN/'plugin'
     base = ['codesign', '--force', '--options', 'runtime', '--timestamp', '--sign', identity_hash]
     run(*base, '--identifier', 'local.prisma.chrome', helper)
-    run(*base, '--identifier', 'io.github.kory-.prisma', plugin)
+    run(*base, '--identifier', 'io.github.kory.prisma', plugin)
     run(*base, '--entitlements', ROOT/'Release/Prisma.entitlements', app)
     teams = {signature(path) for path in [app, helper, plugin]}
     if len(teams) != 1:
@@ -155,7 +155,7 @@ def finish(profile, cli):
     output.mkdir(parents=True, exist_ok=True)
     run(cli, 'validate', '--no-update-check', plugin)
     run(cli, 'pack', '--no-update-check', plugin, '--output', output, '--force')
-    packed_plugin = output/'io.github.kory-.prisma.streamDeckPlugin'
+    packed_plugin = output/'io.github.kory.prisma.streamDeckPlugin'
     run('python3', ROOT/'Source/PluginPackagePermissions.py', packed_plugin, plugin)
     with zipfile.ZipFile(packed_plugin) as archive:
         names = [name for name in archive.namelist() if name.endswith('/plugin')]

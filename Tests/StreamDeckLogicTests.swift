@@ -2,7 +2,7 @@ import Foundation
 let p=Plugin();var messages:[[String:Any]]=[];var commands:[URL]=[]
 p.messageSink={messages.append($0)};p.commandSink={commands.append($0)};p.active=true;p.lastState=Date()
 p.slots=["alpha.app","beta.app","",""];p.levels=["alpha.app":["name":"Alpha","volume":0.5,"running":true],"beta.app":["name":"Beta","volume":0.8,"running":true]]
-func event(_ e:String,_ c:String,_ col:Int,_ settings:[String:Any]=[:],_ extra:[String:Any]=[:])->[String:Any]{var payload:[String:Any]=["controller":"Encoder","coordinates":["column":col,"row":0],"settings":settings];for(k,v)in extra{payload[k]=v};return ["event":e,"context":c,"action":"io.github.kory-.prisma.auto","payload":payload]}
+func event(_ e:String,_ c:String,_ col:Int,_ settings:[String:Any]=[:],_ extra:[String:Any]=[:])->[String:Any]{var payload:[String:Any]=["controller":"Encoder","coordinates":["column":col,"row":0],"settings":settings];for(k,v)in extra{payload[k]=v};return ["event":e,"context":c,"action":"io.github.kory.prisma.auto","payload":payload]}
 p.receive(event("willAppear","dial1",0));p.receive(event("willAppear","dial2",1));assert(p.displayed["dial1"]=="alpha.app" && p.displayed["dial2"]=="beta.app")
 p.receive(event("dialRotate","dial1",0,[:],["ticks":-2]));let q=URLComponents(url:commands.last!,resolvingAgainstBaseURL:false)!.queryItems!;assert(q.contains{ $0.name=="app"&&$0.value=="alpha.app" });assert(q.contains{ $0.name=="op"&&$0.value=="down" });assert(q.contains{ $0.name=="step"&&$0.value=="10.0" })
 p.slots=["beta.app","alpha.app","",""];p.refresh();assert(p.displayed["dial1"]=="alpha.app")
@@ -22,7 +22,7 @@ p.receive(event("dialRotate","dial1",0,[:],["ticks":-1]))
 assert(URLComponents(url:commands.last!,resolvingAgainstBaseURL:false)!.queryItems!.contains{$0.name=="app" && $0.value==tabKey})
 print("PASS: tab favicon feedback and exact tab target for Stream Deck")
 
-let resourceURL = URL(fileURLWithPath:FileManager.default.currentDirectoryPath).appendingPathComponent("io.github.kory-.prisma.sdPlugin")
+let resourceURL = URL(fileURLWithPath:FileManager.default.currentDirectoryPath).appendingPathComponent("io.github.kory.prisma.sdPlugin")
 for (locale, expected) in [("ja", "再生待ち"), ("ja_JP", "再生待ち"), ("en-GB", "Waiting for audio"), ("fr", "Waiting for audio")] {
  p.configureLanguage(info:["application":["language":locale]], resources:resourceURL)
  p.active=true; p.lastState=Date(); p.slots=["", "", "", ""]; p.locks.removeAll(); p.refresh()

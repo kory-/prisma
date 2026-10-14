@@ -50,17 +50,17 @@ for (const [locale, resolved] of [['ja', 'ja'], ['ja-JP', 'ja'], ['en-GB', 'en']
   assert.equal(controls.children[0].attributes['aria-label'], resolved === 'ja' ? 'Audio Playerの音量' : 'Volume for Audio Player');
   assert.equal(document.ids.retry.attributes['aria-label'], catalog.retry_connection.message);
 
-  const inspector = documentFor(read('io.github.kory-.prisma.sdPlugin/inspector.html'));
+  const inspector = documentFor(read('io.github.kory.prisma.sdPlugin/inspector.html'));
   const sockets = [];
   const deckContext = vm.createContext({ document: inspector,
-    fetch: async name => ({ ok: true, json: async () => JSON.parse(read(`io.github.kory-.prisma.sdPlugin/${name}`)) }),
+    fetch: async name => ({ ok: true, json: async () => JSON.parse(read(`io.github.kory.prisma.sdPlugin/${name}`)) }),
     Option: function(text, value) { return { text, value }; },
     WebSocket: class { constructor() { this.readyState = 1; this.messages = []; sockets.push(this); } send(message) { this.messages.push(JSON.parse(message)); } }
   });
-  vm.runInContext(read('io.github.kory-.prisma.sdPlugin/localization.js'), deckContext);
-  vm.runInContext(read('io.github.kory-.prisma.sdPlugin/inspector.js'), deckContext);
+  vm.runInContext(read('io.github.kory.prisma.sdPlugin/localization.js'), deckContext);
+  vm.runInContext(read('io.github.kory.prisma.sdPlugin/inspector.js'), deckContext);
   const info = JSON.stringify({ application: { language: locale } });
-  const action = JSON.stringify({ action: 'io.github.kory-.prisma.auto', payload: { controller: 'Encoder', settings: { step: 5 } } });
+  const action = JSON.stringify({ action: 'io.github.kory.prisma.auto', payload: { controller: 'Encoder', settings: { step: 5 } } });
   await vm.runInContext(`connectElgatoStreamDeckSocket(1234, 'test', 'registerPropertyInspector', ${JSON.stringify(info)}, ${JSON.stringify(action)})`, deckContext);
   assert.equal(inspector.documentElement.lang, resolved);
   assert.equal(inspector.ids.mode.value, 'auto'); assert.equal(inspector.ids.mode.disabled, true);

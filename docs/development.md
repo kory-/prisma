@@ -19,7 +19,7 @@ If Xcode is selected but its setup is incomplete, finish Xcode setup yourself or
 ./test-memory.command
 ```
 
-Build products are `Prisma.app`, `io.github.kory-.prisma.sdPlugin/plugin`, the optional `Prisma Auto.streamDeckProfile`, and scratch files inside `.build/`. The app embeds Prisma Tabs. Builds use ad-hoc signatures. Building does not install, run, or replace your existing app or plugin.
+Build products are `Prisma.app`, `io.github.kory.prisma.sdPlugin/plugin`, the optional `Prisma Auto.streamDeckProfile`, and scratch files inside `.build/`. The app embeds Prisma Tabs. Builds use ad-hoc signatures. Building does not install, run, or replace your existing app or plugin.
 
 `test.command` runs isolated logic and localization audits. UI tests in `test-localization.command` and `test-memory.command` require a logged-in macOS desktop session with WindowServer access; their wrappers fail if the test exits without its completion marker. They construct test views and do not start audio capture.
 
@@ -39,7 +39,7 @@ Test the resulting package outside the checkout:
 ```sh
 python3 -m venv .build/plugin-test-env
 .build/plugin-test-env/bin/python -m pip install websockets==17.1
-.build/plugin-test-env/bin/python Tests/PackedPluginTests.py dist/io.github.kory-.prisma.streamDeckPlugin
+.build/plugin-test-env/bin/python Tests/PackedPluginTests.py dist/io.github.kory.prisma.streamDeckPlugin
 ```
 
 This extracts the final archive into a temporary directory, checks its code signature and executable permissions, and runs the extracted binary against a local mock Stream Deck connection. It must pass without changing permissions after extraction. Before submitting to Marketplace, also install the packed file through Stream Deck itself, then test the DRM-processed download from Maker Console. Passing the mock connection test alone does not establish that the Stream Deck installer accepts the package.
@@ -53,10 +53,10 @@ GitHub Actions builds and tests changes on an Apple Silicon macOS runner. Audio 
 - `Source/StreamDeck.swift`: optional Stream Deck plugin.
 - `Source/ChromeHost.mm`, `Source/BrowserTabs.h`: local Chrome integration.
 - `ChromeExtension/`: Manifest V3 source and translations.
-- `io.github.kory-.prisma.sdPlugin/`: public plugin metadata, icons and property inspector.
+- `io.github.kory.prisma.sdPlugin/`: public plugin metadata, icons and property inspector.
 - `Tests/`: isolated native, JavaScript and integration checks.
 
-The native app ID `local.appmixer.desktop`, local notification names and URL schemes remain stable for existing user preferences. The public Stream Deck ID is `io.github.kory-.prisma`; it is distinct from the old private development ID. The Chrome manifest contains a **public** key to preserve extension identity; no private signing key belongs in this repository or its releases.
+The native app ID `local.appmixer.desktop`, local notification names and URL schemes remain stable for existing user preferences. The public Stream Deck ID is `io.github.kory.prisma`; it is distinct from the old private development ID. The Chrome manifest contains a **public** key to preserve extension identity; no private signing key belongs in this repository or its releases.
 
 ## Public distribution
 

@@ -3,7 +3,7 @@ import argparse,uuid,json,zipfile
 from pathlib import Path
 out=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser(description=__doc__)
-parser.add_argument('--manifest',type=Path,default=out/'io.github.kory-.prisma.sdPlugin/manifest.json')
+parser.add_argument('--manifest',type=Path,default=out/'io.github.kory.prisma.sdPlugin/manifest.json')
 manifest=json.loads(parser.parse_args().manifest.read_text())
 profile=str(uuid.UUID('230A9A45-13E5-4D86-BB9F-AB4A078B6152')).upper()+'.sdProfile'
 page=str(uuid.UUID('F9607212-4DF0-4A65-8D91-59EDFE09A3A1'))

@@ -34,7 +34,7 @@ for path in chrome.iterdir():
 for key in catalogs['en']:
     assert re.findall(r'\$\d', catalogs['en'][key]['message']) == re.findall(r'\$\d', catalogs['ja'][key]['message']), key
 
-deck = root / 'io.github.kory-.prisma.sdPlugin'
+deck = root / 'io.github.kory.prisma.sdPlugin'
 catalogs = {lang: json.loads((deck / f'{lang}.json').read_text()) for lang in ['en', 'ja']}
 assert catalogs['en']['Localization'].keys() == catalogs['ja']['Localization'].keys()
 manifest = json.loads((deck / 'manifest.json').read_text())

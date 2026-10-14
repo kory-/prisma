@@ -1,8 +1,13 @@
 # Changelog
 
+## Stream Deck plugin 0.4.3.0 — In preparation
+
+- Change the plugin UUID to `io.github.kory.prisma` at Elgato's request after they identified the trailing dash in the former ID as the cause of installation failures in their testing. Update all actions, localization catalogs, build/package paths and the optional profile together.
+- Existing preview actions use different IDs and require manual migration; the app and Chrome IDs are unchanged.
+
 ## 0.7.1 — In preparation
 
-- Preserve native executable permissions in the packed Stream Deck plugin. Add a regression check that extracts and launches the actual archive outside the checkout. Both the original Marketplace download and the revised local package installed and connected on the tested Mac; the reviewer's installation failure has not been reproduced and re-review is pending.
+- Preserve native executable permissions in the packed Stream Deck plugin. Add a regression check that extracts and launches the actual archive outside the checkout. Both the original Marketplace download and the revised local package installed and connected on the tested Mac; the reviewer's failure was later attributed by Elgato to the UUID (see below).
 - Add an optional Developer ID signing and resumable Apple notarization workflow for the app, Chrome native helper and Stream Deck executable. Current previews remain ad-hoc signed and not notarized; Marketplace approval is still pending.
 - Prepare Stream Deck plugin 0.4.2.0, listing text, thumbnail and three gallery images for submission. Enable SDK 3 for Marketplace processing; the new plugin requires Stream Deck 6.9 or later.
 - Verify the exact submitted archive and the final extracted app, and guard against duplicate notarization uploads.

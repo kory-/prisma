@@ -5,7 +5,7 @@ dist/
 *.dSYM/
 *.streamDeckPlugin
 *.streamDeckProfile
-io.github.kory-.prisma.sdPlugin/plugin
+io.github.kory.prisma.sdPlugin/plugin
 node_modules/
 .DS_Store
 __pycache__/
@@ -18,4 +18,4 @@ __pycache__/
 *.mobileprovision
 .env
 .env.*
-io.github.kory-.prisma.sdPlugin/LICENSE
+io.github.kory.prisma.sdPlugin/LICENSE

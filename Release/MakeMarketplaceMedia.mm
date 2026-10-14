@@ -36,8 +36,8 @@ static void exportPNG(NSString*file,int width,int height,void(^draw)(void)){
 }
 int main(int argc,char**argv){@autoreleasepool{
  assert(argc==2);NSString*out=[NSString stringWithUTF8String:argv[1]];[[NSFileManager defaultManager]createDirectoryAtPath:out withIntermediateDirectories:YES attributes:nil error:nil];
- NSImage*art=[[NSImage alloc]initWithContentsOfFile:@"io.github.kory-.prisma.sdPlugin/images/plugin@2x.png"];assert(art);
- NSData*data=[NSData dataWithContentsOfFile:@"io.github.kory-.prisma.sdPlugin/dial-layout.json"];layout=[NSJSONSerialization JSONObjectWithData:data options:0 error:nil][@"items"];assert(layout.count==4);
+ NSImage*art=[[NSImage alloc]initWithContentsOfFile:@"io.github.kory.prisma.sdPlugin/images/plugin@2x.png"];assert(art);
+ NSData*data=[NSData dataWithContentsOfFile:@"io.github.kory.prisma.sdPlugin/dial-layout.json"];layout=[NSJSONSerialization JSONObjectWithData:data options:0 error:nil][@"items"];assert(layout.count==4);
  exportPNG([out stringByAppendingPathComponent:@"icon-288.png"],288,288,^{picture(art,0,0,288,288);});
  exportPNG([out stringByAppendingPathComponent:@"thumbnail.png"],1920,960,^{
   rect(0,0,1920,960,0,0x101113);picture(art,122,190,590,590);text(@"Prisma",822,228,950,114,NSFontWeightSemibold,0xf5f5f7);text(@"Per-app volume for macOS",828,398,990,43,NSFontWeightRegular,0xb8b8c2);rect(830,498,800,1,0,0x34353a);text(@"Stream Deck keys & dials",828,542,960,33,NSFontWeightMedium,0xe2e2e7);text(@"Apple Silicon  ·  macOS 14.4 or later",832,824,990,24,NSFontWeightRegular,0x81828b);

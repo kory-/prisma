@@ -1,4 +1,23 @@
-# Plugin installation verification — 2026-09-24
+# Plugin installation verification
+
+## Corrected UUID — 2026-10-15
+
+Elgato reported on October 14 (UTC) that changing `io.github.kory-.prisma` to `io.github.kory.prisma` allowed installation on their test machines, and requested a new Maker Console product with that ID. Version 0.4.3.0 implements the change across the manifest, action IDs, localization catalogs, packaging and optional profile. The old failure has not been reproduced locally; the diagnosis comes from Elgato's review team.
+
+- Test machine: Apple Silicon, macOS 27.0.1 (26A434), Stream Deck 7.4.2 (22730).
+- Packed CLI archive: `io.github.kory.prisma.streamDeckPlugin`, 428,888 bytes.
+- SHA-256: `73351e95fe31941b328854a7f0c4104cd61f03c0204b253948ae58afa095ae77`.
+- Official CLI 1.9.0 validation and packaging passed.
+- `./test.command` passed, including Stream Deck logic and both language catalogs.
+- `Tests/PackedPluginTests.py` passed with extraction into a temporary directory outside the checkout, unmodified executable permissions, signature verification, WebSocket registration and key/dial feedback. It also checks reverse-DNS labels, action/catalog IDs, listing metadata and the generated profile.
+- Finder opened the exact packed archive, and Stream Deck installed the previously absent new UUID normally. The UI confirmed installation; the log recorded `AllOk` at 07:48:48.731 JST and `Plugin connected` at 07:48:48.786 JST. The installed binary matches the archive and passes strict signature verification.
+- Existing old-ID plugins and profiles were retained. Actions do not migrate automatically across UUIDs.
+
+Maker Console recognized the uploaded UUID, version, SDK 3, macOS 14.4+, Stream Deck 6.9+ and both languages. New-product creation is currently blocked by a validation error on the existing name `Prisma`; Continue is disabled. The existing product's name is read-only. No new submission or Marketplace approval is claimed. The corrected Marketplace-processed download is not yet available for an installation test.
+
+The advertised minimum OS/Stream Deck versions, Intel/Windows, clean macOS accounts, audio playback and physical dial operation were not tested in this installation run.
+
+## Earlier installation evidence — 2026-09-24
 
 The Marketplace reviewer reported that Prisma 0.4.2 could not be installed. The exact error, operating system, CPU architecture and Stream Deck version used by the reviewer have not been provided. The failure has **not been reproduced** on the test Mac below.
 
@@ -33,7 +52,7 @@ The original CLI archive loses executable permissions. Extracting it with `ditto
 
 However, Stream Deck 7.4.0 restored executable permissions when installing the original Marketplace download. The permission loss therefore does **not** establish the cause of the reviewer's installation failure. It is a packaging robustness improvement with an automated regression test.
 
-## Remaining verification
+## Remaining verification as of October 5 (superseded by the UUID diagnosis above)
 
 - Obtain the reviewer's OS, CPU architecture, Stream Deck version and exact error, and distinguish an installation rejection from a plugin launch or app-connection problem.
 - Reproduce the reported failure in the relevant supported environment before claiming it fixed.

@@ -44,7 +44,7 @@ with zipfile.ZipFile(chrome_zip,'w') as z:
     add(z,root/'LICENSE','LICENSE')
     add(z,root/'PRIVACY.md','PRIVACY.md')
 shutil.copy2(root/'Prisma Auto.streamDeckProfile',out/'Prisma.Auto.streamDeckProfile')
-plugin = out/'io.github.kory-.prisma.streamDeckPlugin'
+plugin = out/'io.github.kory.prisma.streamDeckPlugin'
 assert plugin.is_file()
 files = [app_zip,chrome_zip,plugin,out/'Prisma.Auto.streamDeckProfile']
 for path in files:
