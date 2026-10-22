@@ -1,15 +1,15 @@
 # Prisma for Stream Deck
 
-[Download Prisma app](https://github.com/kory-/prisma/releases/tag/v0.7.0) · [Download plugin 0.4.3](https://github.com/kory-/prisma/releases/tag/plugin-v0.4.3) · [日本語の手順](#日本語の手順)
+[Get the Marketplace plugin](https://marketplace.elgato.com/product/prisma-e0de8f67-6cdc-46f1-9e43-80ba5985aa78) · [Download Prisma app](https://github.com/kory-/prisma/releases/tag/v0.7.0) · [Download plugin 0.4.3](https://github.com/kory-/prisma/releases/tag/plugin-v0.4.3) · [日本語の手順](#日本語の手順)
 
 The GitHub preview plugin (0.4.1.0) requires **Prisma 0.7.0**, an **Apple Silicon Mac**, macOS **14.4+**, and Stream Deck software **6.6+**. Dials require Stream Deck +. Windows and Intel Mac builds are not included.
 
-The Marketplace candidate (0.4.3.0) requires Stream Deck **6.9+** and uses SDK 3 for Marketplace processing. It works with the same Prisma 0.7.0 app. Marketplace approval is pending.
+The published Marketplace plugin (0.4.3.0) requires Stream Deck **6.9+** and uses SDK 3 for Marketplace processing. It works with the same Prisma 0.7.0 app. It is available on [Elgato Marketplace](https://marketplace.elgato.com/product/prisma-e0de8f67-6cdc-46f1-9e43-80ba5985aa78).
 
 ## Setup
 
 1. Install and launch Prisma. Enable volume control and grant macOS audio access.
-2. Double-click `io.github.kory.prisma.streamDeckPlugin` (the older v0.7.0 download is named `io.github.kory-.prisma.streamDeckPlugin`) and accept Stream Deck's installation prompt.
+2. Install the plugin from [Elgato Marketplace](https://marketplace.elgato.com/product/prisma-e0de8f67-6cdc-46f1-9e43-80ba5985aa78). For the GitHub download, double-click `io.github.kory.prisma.streamDeckPlugin` and accept Stream Deck's installation prompt (the older v0.7.0 download is named `io.github.kory-.prisma.streamDeckPlugin`).
 3. Find the **Prisma** category in Stream Deck and place the actions you want.
 
 | Action | Control |
@@ -32,15 +32,15 @@ The Prisma app bundle ID and local messaging names are retained for compatibilit
 
 ## Distribution status
 
-This package is distributed directly through GitHub. It is **not yet listed or approved on Elgato Marketplace**. Official CLI validation checks package structure; it is not a hardware compatibility certification. [Testing status](testing.md)
+Prisma 0.4.3 is approved and published on [Elgato Marketplace](https://marketplace.elgato.com/product/prisma-e0de8f67-6cdc-46f1-9e43-80ba5985aa78). The plugin is also available directly through GitHub. The separate, free [Prisma 0.7.0 macOS app](https://github.com/kory-/prisma/releases/tag/v0.7.0) is required for either installation method. Official CLI validation checks package structure; it is not a hardware compatibility certification. [Testing status](testing.md)
 
 ## 日本語の手順
 
 1. Prisma本体を導入・起動し、音量コントロールをオンにします。
-2. `io.github.kory.prisma.streamDeckPlugin` をダブルクリックしてStream Deckへ導入します（以前のv0.7.0配布ファイル名は `io.github.kory-.prisma.streamDeckPlugin` です）。
+2. [Elgato Marketplace](https://marketplace.elgato.com/product/prisma-e0de8f67-6cdc-46f1-9e43-80ba5985aa78)からプラグインを導入します。GitHub配布版は `io.github.kory.prisma.streamDeckPlugin` をダブルクリックして導入します（以前のv0.7.0配布ファイル名は `io.github.kory-.prisma.streamDeckPlugin` です）。
 3. 「Prisma」カテゴリのアクションを配置します。「再生中を自動割り当て」をダイヤルに置くと、左から再生中アプリを自動で割り当てます。
 4. 回して音量、押す／タッチでミュート。固定アプリや変更幅はアクション設定から選べます。
 
-Marketplace提出版（0.4.3.0）はStream Deck 6.9以降が必要です。GitHubプレビュー版（0.4.1.0）の必要条件は6.6以降のままです。
+Marketplace公開版（0.4.3.0）はStream Deck 6.9以降が必要です。GitHubプレビュー版（0.4.1.0）の必要条件は6.6以降のままです。
 
-Prisma本体は別途必要です。本体だけでも利用できます。0.4.3.0からIDを `io.github.kory.prisma` に変更しました。以前の `io.github.kory-.prisma` や開発用IDとは別のプラグインなので、既存プロファイルをバックアップし、新しいアクションへ置き換えるか対応する新しいプロファイルを読み込んでください。自動移行は行いません。現在はGitHubでの直接配布で、Marketplace掲載前です。
+Prisma本体は別途必要です。本体だけでも利用できます。0.4.3.0からIDを `io.github.kory.prisma` に変更しました。以前の `io.github.kory-.prisma` や開発用IDとは別のプラグインなので、既存プロファイルをバックアップし、新しいアクションへ置き換えるか対応する新しいプロファイルを読み込んでください。自動移行は行いません。0.4.3は[Elgato Marketplace](https://marketplace.elgato.com/product/prisma-e0de8f67-6cdc-46f1-9e43-80ba5985aa78)で公開済みです。GitHubからの直接配布も継続しています。
